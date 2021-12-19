@@ -10,7 +10,10 @@ const {
   updateTodo,
   deleteTodo,
 } = require("../controllers/todo");
+
 // Get addUser controller user here ...
+const { addUsers } = require("../controllers/user");
+
 
 // Route
 router.get("/todos", getTodos);
@@ -20,5 +23,7 @@ router.patch("/todo/:id", updateTodo);
 router.delete("/todo/:id", deleteTodo);
 
 // Create Route for add user here ...
+router.post("/user", addUsers);
+
 
 module.exports = router;
